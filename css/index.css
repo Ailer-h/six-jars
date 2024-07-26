@@ -1,11 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
-    --secondary: #201E43;
-    --accent-color: #399918;
-    --accent-darker: #328516;
+    
+    --background: #f1f1e6;
+    --background-darker: #d6d6cf;
+    --primary: #021526;
 
-    --secondary-text: white;
+    --accent_1: #feba3e;
+    --accent_1_darker: #e2a739;
+    --accent_2: #0099ff;
+    --accent_3: #03346E;
+
+    --text-color_1: white;
+    --text-color_2: black;
+
 }
 
 *{
@@ -16,8 +24,23 @@
 
 }
 
+body{
+    background-color: var(--background);
+}
+
+hr{
+    border: 1;
+
+    width: calc(100% - 6em);
+    margin-left: 3em;
+
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+
+}
+
 .navbar{
-    background-color: var(--secondary);
+    background-color: var(--primary);
     height: 5em;
     padding-left: 1em;
     padding-right: 1em;
@@ -25,13 +48,15 @@
     position: sticky;
     top: 0;
 
+    z-index: 10;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .navbar h1{
-    color: white;
+    color: var(--text-color_1);
 }
 
 .navbar .menu{
@@ -43,9 +68,9 @@
 }
 
 .primary{
-    background-color: var(--accent-color);
+    background-color: var(--accent_1);
     border: none;
-    color: white;
+    color: var(--text-color_1);
     font-weight: bold;
 
     padding: 1em;
@@ -57,7 +82,7 @@
 }
 
 .primary:hover{
-    background-color: var(--accent-darker);
+    background-color: var(--accent_1_darker);
     transform: scale(1.2);
     cursor: pointer;
     transition: 200ms;
@@ -67,7 +92,7 @@
 .secondary{
     background-color: transparent;
     border: none;
-    color: white;
+    color: var(--text-color_1);
 
     padding: .6em;
     border-radius: 1em;
@@ -87,13 +112,150 @@
 
 }
 
+.banner{
+    background-image: url("../images/money.jpg");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    height: 20em;
+}
+
+.banner .title{
+    backdrop-filter: blur(.3em);
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .title h1{
+
+    color: var(--text-color_1);
+    font-size: 4em;
+    text-align: center;
+}
+
+.banner .title h2{
+    color: var(--text-color_1);
+    font-size: 2em;
+    text-align: center;
+}
+
+.values{
+
+    display: flex;
+    justify-content: space-evenly;
+
+    width: 100%;
+    margin-top: 3em;
+
+}
+
+.values .card{
+
+    height: fit-content;
+    width: 15em;
+
+    border-radius: 1em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.values .card .icon{
+
+    height: 6em;
+    width: 6em;
+
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+    background-color: var(--accent_3);
+    padding: 1em;
+    border-radius: 10em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.values .card .icon svg{
+
+    height: 5em;
+    width: 5em;
+
+}
+
+.values .card h1{
+
+    text-align: center;
+    font-size: 1.3em;
+
+    color: var(--text-color_2);
+
+}
+
+.text{
+
+    height: fit-content;
+    width: 100%;
+
+    text-align: center;
+
+    padding-bottom: 1em;
+
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+}
+
+.text h1{
+    font-size: 4em;
+    
+    color: var(--text-color_2);
+}
+
+.text p{
+    font-size: 1.5em;
+    margin-top: 1em;
+
+    color: var(--text-color_2);
+}
+
+.footer{
+    height: 5em;
+
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--primary);
+    
+    color: var(--text-color_1);
+}
+
+/* Classes da responsividade */
 .container {
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    border: 1px solid red;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* border: 1px solid red; */
 }
   
 /* 2xl */
@@ -135,5 +297,13 @@
 @media (max-width: 475px) {
     .container {
       width: 100%;
+    }
+
+    .banner .menu h1{
+        font-size: 1em;
+    }
+
+    .banner .menu h2{
+        font-size: .5em;
     }
 }
