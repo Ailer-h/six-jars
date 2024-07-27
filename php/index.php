@@ -11,7 +11,7 @@
     <div class="navbar">
         <h1>Wealthier</h1>
         <div class="menu">
-            <a href="#"><button class="secondary">Sign Up</button></a>
+            <a href="signup.php"><button class="secondary">Sign Up</button></a>
             <a href="login.php"><button class="primary">Log In</button></a>
         </div>
     </div>
