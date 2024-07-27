@@ -1,3 +1,14 @@
+<?php
+
+    //Checks if the user is logged in and redirects them if so
+    session_start();
+
+    if(isset($_SESSION["username"])){
+        header("Location: user_dashboard.php");
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +21,7 @@
 <body>
     
     <div class="container">
-        <form action="utilities/validadeLogin.php" method="post">
+        <form action="utilities/validateLogin.php" method="post">
             <div class="login-form">
                 <h1>Welcome back!</h1>
                 <div>
