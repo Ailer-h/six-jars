@@ -6,7 +6,6 @@
     $password = $_POST['password'];
 
     $info = mysqli_fetch_array(mysqli_query($connection, "select user_password, user_id, user_permissions, user_name, theme_preference from users where user_email like '$email';"));
-
     
     if(empty($info)){ //No info returned thus, the user doesn't exist
 

@@ -128,6 +128,38 @@ body{
     display: none;
 }
 
+.warning{
+
+    width: 20em;
+    height: 5em;
+
+    display: none;
+    place-items: center;
+    grid-template-columns: 30% 70%;
+
+    position: absolute;
+
+    right: .5em;
+    top: 2em;
+
+    padding: .3em;
+
+    background-color: #e2564c62;
+    border: .15em solid #e2574c;
+}
+
+.warning p{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.warning svg{
+    width: 5em;
+    height: 5em;
+
+    fill: #e2574c;
+}
+
 /* Classes da responsividade */
 .container {
     max-width: 100%;
