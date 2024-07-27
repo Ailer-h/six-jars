@@ -160,10 +160,10 @@ body{
 
 .warning{
 
-    width: 20em;
-    height: 5em;
+    width: 15em;
+    height: 3em;
 
-    display: none;
+    /* display: none; */
     place-items: center;
     grid-template-columns: 30% 70%;
 
@@ -179,13 +179,13 @@ body{
 }
 
 .warning p{
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: bold;
 }
 
 .warning svg{
-    width: 5em;
-    height: 5em;
+    width: 3em;
+    height: 3em;
 
     fill: #e2574c;
 }
