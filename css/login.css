@@ -183,33 +183,4 @@ body{
     .container {
       width: 100%;
     }
-
-    .banner .menu h1{
-        font-size: 1em;
-    }
-
-    .banner .menu h2{
-        font-size: .5em;
-    }
-
-    .text h1{
-        font-size: 1.9em;
-    }
-    
-    .text p{
-        font-size: .9em;
-    }
-
-    .values .card .icon{
-        width: 3em;
-        height: 3em;
-    }
-
-    .values .card h1{
-        font-size: .9em;
-    }
-
-    .navbar, .footer, .banner{
-        width: 100%;
-    }
 }

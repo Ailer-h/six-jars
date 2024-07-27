@@ -14,5 +14,6 @@
 </head>
 <body>
     <h1>User</h1>
+    <a href="utilities/sessionDestroy.php">Log out</a>
 </body>
 </html>
