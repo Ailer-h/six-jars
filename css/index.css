@@ -77,10 +77,8 @@ hr{
 }
 
 .navbar .menu{
-    width: 10em;
-
     display: flex;
-    justify-content: space-evenly;
+    gap: 1em;
     align-items: center;
 }
 
@@ -122,7 +120,7 @@ hr{
 
 .secondary:hover{
     background-color: white;
-    color: var(--secondary);
+    color: var(--primary);
     transform: scale(1.1);
     cursor: pointer;
     transition: 200ms;

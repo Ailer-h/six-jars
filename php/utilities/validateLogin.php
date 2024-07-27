@@ -5,7 +5,7 @@
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $info = mysqli_fetch_array(mysqli_query($connection, "select user_password, user_id, user_permissions, user_name from users where user_email like '$email';"));
+    $info = mysqli_fetch_array(mysqli_query($connection, "select user_password, user_id, user_permissions, user_name, theme_preference from users where user_email like '$email';"));
 
     
     if(empty($info)){ //No info returned thus, the user doesn't exist
@@ -30,6 +30,7 @@
         $_SESSION['id'] = $info[1];
         $_SESSION['permissions'] = $info[2];
         $_SESSION['username'] = $info[3];
+        $_SESSION['theme'] = $info[4];
 
         mysqli_close($connection);
 
