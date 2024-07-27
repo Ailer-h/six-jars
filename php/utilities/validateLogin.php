@@ -33,6 +33,10 @@
 
         mysqli_close($connection);
 
+        //Makes the session last for 30 days
+        $params = session_get_cookie_params();
+        setcookie(session_name(), $_COOKIE[session_name()], time() + 60*60*24*30, $params["path"], $params["domain"], $params["secure"], $params["httponly"]);
+
         //Redirects user to the dashboard
         header("Location: ../user_dashboard.php");
         
