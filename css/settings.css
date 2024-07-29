@@ -421,6 +421,11 @@ hr{
     .container {
       max-width: 1024px;
     }
+
+    .grid{
+      grid-template-columns: 25% 75%;
+    }
+    
 }
   
 /* lg */
@@ -428,6 +433,11 @@ hr{
     .container {
       max-width: 768px;
     }
+
+    .grid{
+      grid-template-columns: 35% 65%;
+    }
+    
 }
   
 /* md */
@@ -435,8 +445,34 @@ hr{
     .container {
       max-width: 640px;
     }
-}
-  
+
+    .grid{
+      display: block;
+    }
+
+    .grid .sidebar{
+      display: none;
+    }
+
+    .grid .content section{
+      display: block;
+      margin-bottom: 2em;
+    }
+
+    .navbar .secondary{
+      display: none;
+    }
+
+    .navbar #logout{
+      font-size: 0;
+    }
+
+    .navbar #settings{
+      display: flex;
+      align-items: center;
+    }
+
+  }  
 /* sm */
 @media (max-width: 640px) {
     .container {
