@@ -91,6 +91,8 @@ hr{
     padding: 1em;
     border-radius: 1em;
 
+    min-width: 6em;
+
     height: fit-content;
 
     transition: 200ms;
@@ -111,6 +113,8 @@ hr{
 
     padding: .6em;
     border-radius: 1em;
+
+    min-width: 4em;
 
     height: fit-content;
 

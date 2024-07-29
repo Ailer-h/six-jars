@@ -9,12 +9,15 @@
     --accent_1: #feba3e;
     --accent_1_darker: #e2a739;
     --accent_2: #0099ff;
+    --accent_2_darker: #0278c7;
     --accent_3: #03346E;
+    --accent_3_darker: #022653;;
 
     --text-color_1: black;
     --text-color_2: white;
 
     --text-color_0: gray;
+    --danger: #d91919;
 
 }
 
@@ -26,7 +29,9 @@
   --accent_1: #feba3e;
   --accent_1_darker: #e2a739;
   --accent_2: #03346E;
+  --accent_2_darker: #022653;
   --accent_3: #0099ff;
+  --accent_3_darker: #0278c7;
 
   --text-color_1: white;
   --text-color_2: black;
@@ -162,7 +167,7 @@ hr{
 
   padding: .6em;
   border-radius: 1em;
-  
+
   min-width: 4em;
 
   height: fit-content;
@@ -182,174 +187,209 @@ hr{
 
 }
 
-.info-cards{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.grid{
+
+  display: grid;
+  grid-template-columns: 20% 80%;
 
   width: 100%;
+  height: 80vh;
+
 }
 
-.info-cards h1{
-  font-size: 2.5em;
-}
+.grid .sidebar{
 
-.info-cards h2{
-  font-size: 2em;
-}
+  border-right: .05em solid var(--text-color_1);
 
-.info-cards h3{
-  font-size: 1em;
-}
-
-.info-cards .greetings{
-  background-color: var(--background-darker);
-  border-radius: 1.3em;
-
-  height: 5em;
-
-  padding: .8em 1.2em .8em 1.2em;
-  color: var(--text-color_1);
-
-  position: relative;
-}
-
-.info-cards .card-medium{
-  background-color: var(--background-darker);
-  border-radius: 1.3em;
-
-  height: 5em;
-
-  padding: .8em 1.2em .8em 1.2em;
-
-  color: var(--text-color_1);
-
-  position: relative;
-}
-
-.info-cards .card-small{
-  background-color: var(--background-darker);
-  border-radius: 1.3em;
-
-  height: 5em;
-
-  padding: .8em 1.2em .8em 1.2em;
-
-  color: var(--text-color_1);
+  padding: .8em 1.5em .8em 1.5em;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  align-items: left;
+
 }
 
-.info-cards .card-small svg{
-  width: 4.5em;
-  height: 4.5em;
-  fill: var(--text-color_1);
+.grid .sidebar hr, .grid .content section hr{
+  border: 1;
 
-  cursor: pointer;
+  width: 100%;
+
+  margin-left: 0;
+
+  margin-top: .8em;
+  margin-bottom: .8em;
 }
 
-.info-cards .more{
-  position: absolute;
+.grid .sidebar .tab{
 
-  bottom: .5em;
-  right: 1em;
-
-  cursor: pointer;
-}
-
-.jars{
+  list-style: none;
+  height: 2.5em;
 
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-
-  gap: 1em;
-
-  margin-top: 1em;
-
-}
-
-.jars .card{
-
-  width: 12em;
-  height: 12em;
-
-  border-radius: 2em;
-  background-color: var(--background-darker);
-
-  display: flex;
-  flex-direction: column;
   align-items: center;
+  padding-left: .5em;
 
-  padding-top: 1em;
-  padding-bottom: 1em;
+  font-weight: bold;
+
+  cursor: pointer;
 
 }
 
-.jars .card .icon{
-
-  width: 4em;
-  height: 4em;
-
-  border-radius: 2em;
+.grid .sidebar .tab:hover{
   background-color: var(--accent_2);
+}
+
+.grid .sidebar .selected{
+  background-color: var(--accent_2_darker);
+  font-style: italic;
+}
+
+.grid .sidebar .del-account{
+  color: var(--danger);
+  list-style: none;
+  height: 2.5em;
 
   display: flex;
-  justify-content: center;
   align-items: center;
+  padding-left: .5em;
 
+  font-weight: bold;
+
+  cursor: pointer;
 }
 
-.jars .card .icon svg{
+.grid .sidebar .del-account:hover{
+  background-color: var(--danger);
+  color: var(--text-color_1);
+}
 
-  width: 3em;
-  height: 3em;
+.grid .sidebar .del-account svg{
+  fill: var(--danger);
+  margin-left: .5em;
+}
 
+.grid .sidebar .del-account:hover svg{
   fill: var(--text-color_1);
+}
+
+.grid .sidebar .del-account.selected{
+  background-color: var(--danger);
+  font-style: italic;
+
+  color: var(--text-color_1);
+}
+
+.grid .sidebar .del-account.selected svg{
+  fill: var(--text-color_1);
+}
+
+.grid .content{
+
+  padding: .8em 1.5em .8em 1.5em;
+  position: relative;
 
 }
 
-.jars .card h2{
-  font-size: 1.2em;
+.grid .content section{
+  display: none;
+}
+
+.grid .content section .row{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   margin-top: .5em;
-  margin-bottom: .3em;
+  margin-bottom: .5em;
+}
 
+.grid .content section .row select, input[type='text']{
+  background-color: var(--background);
   color: var(--text-color_1);
 
+  border: .1em solid var(--text-color_1);
+
+  padding: .5em;
 }
 
-.jars .card p{
-  color: var(--text-color_0);
-  font-weight: bold;
-}
+.grid .content section .row button{
+  background-color: var(--accent_2);
 
-.jars .card button{
-
-  margin-top: 2em;
-  
-  padding: .8em;
   border: none;
-  border-radius: 1.2em;
+  padding: .8em 1em .8em 1em;
+  border-radius: .5em;
+  cursor: pointer;
+  margin-top: .5em;
 
-  background-color: var(--accent_1);
-  color: var(--text-color_2);
+  transition: 200ms;
+}
+
+.grid .content section .row button:hover{
+  transform: scale(1.1);
+  background-color: var(--accent_2_darker);
+
+  transition: 200ms;
+}
+
+.grid .content section .delete{
+  background-color: var(--danger);
+
+  border: none;
+  padding: .8em 1em .8em 1em;
+  border-radius: .5em;
+  cursor: pointer;
+  margin-top: .5em;
+
   font-weight: bold;
-
   transition: 200ms;
 
 }
 
-.jars .card button:hover{
-
-  cursor: pointer;
-  transform: scale(1.2);
-  background-color: var(--accent_1_darker);
+.grid .content section .delete:hover{
+  transform: scale(1.1);
   transition: 200ms;
+}
 
+.grid .content #save-form{
+  position: absolute;
+
+  display: none;
+  gap: 1em;
+
+  right: 0;
+  bottom: 0;
+}
+
+.grid .content #save-form button{
+  border: none;
+  padding: .8em 1em .8em 1em;
+  border-radius: .5em;
+  cursor: pointer;
+  margin-top: .5em;
+
+  font-weight: bold;
+  transition: 200ms;
+}
+
+.grid .content #save-form #save{
+  background-color: var(--accent_1);
+}
+
+.grid .content #save-form #cancel{
+  background-color: var(--accent_2);
+}
+
+.grid .content #save-form #save:hover{
+  background-color: var(--accent_1_darker);
+  transform: scale(1.1);
+  transition: 200ms;
+}
+
+.grid .content #save-form #cancel:hover{
+  background-color: var(--accent_2_darker);
+  transform: scale(1.1);
+  transition: 200ms;
 }
 
 /* Classes da responsividade */
@@ -363,6 +403,7 @@ hr{
     display: flex;
     justify-content: center;
     align-items: center;
+
 
 }
   
@@ -385,37 +426,12 @@ hr{
     .container {
       max-width: 768px;
     }
-
-    .info-cards h1{
-      font-size: 1.5em;
-    }
-    
-    .info-cards h2{
-      font-size: 1em;
-    }
-    
-    .info-cards h3{
-      font-size: .8em;
-    }
 }
   
 /* md */
 @media (max-width: 768px) {
     .container {
       max-width: 640px;
-    }
-
-    .navbar .secondary{
-      display: none;
-    }
-
-    .navbar #logout{
-      font-size: 0;
-    }
-
-    .navbar #settings{
-      display: flex;
-      align-items: center;
     }
 }
   
@@ -424,51 +440,11 @@ hr{
     .container {
       max-width: 475px;
     }
-
-    .card-medium{
-      display: none;
-    }
 }
   
 /* xs */
 @media (max-width: 475px) {
     .container {
       width: 100%;
-    }
-
-    .info-cards{
-      flex-direction: column;
-      gap: 1em;
-
-    }
-
-    .info-cards .card-small{
-    
-      height: 2em;
-    
-      padding: .8em 1.2em .8em 1.2em;
-    
-      color: var(--text-color_1);
-    
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      margin-left: 10em;
-
-    }
-    
-    .info-cards .card-small svg{
-      width: 1.5em;
-      height: 1.5em;
-      fill: var(--text-color_1);
-    
-      cursor: pointer;
-
-    }
-
-    .info-cards .card-small h3{
-      font-size: 0;
     }
 }
