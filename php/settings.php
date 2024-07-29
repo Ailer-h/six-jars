@@ -61,6 +61,7 @@
                 </ul>
             </div>
 
+            <form action=""></form>
             <div class="content">
                 
                 <section id="user-settings">
@@ -69,11 +70,13 @@
                     <div class="row">
                         <p>Username</p>
                         <input type="text" id="username" name="username" value="<?php echo $user_info['user_name']; ?>">
+                        <input type="hidden" id="username-expected" name="username-expected" value="<?php echo $user_info['user_name']; ?>">
                     </div>
 
                     <div class="row">
                         <p>Email</p>
-                        <input type="text" id="username" name="username" value="<?php echo $user_info['user_email']; ?>">
+                        <input type="text" id="email" name="email" value="<?php echo $user_info['user_email']; ?>">
+                        <input type="hidden" id="email-expected" name="email-expected" value="<?php echo $user_info['user_email']; ?>">
                     </div>
 
                     <div class="row">
@@ -92,6 +95,8 @@
                             <option value="light" <?php if($_SESSION['theme'] == 'light'){ echo "selected"; } ?>>Light Theme</option>
                             <option value="dark" <?php if($_SESSION['theme'] == 'dark'){ echo "selected"; } ?>>Dark Theme</option>
                         </select>
+
+                        <input type="hidden" id="theme-expected" name="theme-expected" value="<?php echo $user_info['theme_preference']; ?>">
                     </div>
                 </section>
 
