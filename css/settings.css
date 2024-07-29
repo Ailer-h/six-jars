@@ -287,6 +287,7 @@ hr{
 .grid .content{
 
   padding: .8em 1.5em .8em 1.5em;
+  height: 100%;
   position: relative;
 
 }
@@ -358,8 +359,8 @@ hr{
   display: none;
   gap: 1em;
 
-  right: 0;
-  bottom: 0;
+  right: 1em;
+  bottom: 1em;
 }
 
 .grid .content #save-form button{

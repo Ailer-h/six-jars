@@ -61,59 +61,60 @@
                 </ul>
             </div>
 
-            <form action=""></form>
-            <div class="content">
+            <form action="utilities/updateUserInfo.php" method="post">
+                <input type="hidden" name="id" id='id' value='<?php echo $user_info['user_id'] ?>'>
+                <div class="content">
+                    <section id="user-settings">
+                        <h1>User</h1>
+                        <hr>
+                        <div class="row">
+                            <p>Username</p>
+                            <input type="text" id="username" name="username" value="<?php echo $user_info['user_name']; ?>">
+                            <input type="hidden" id="username-expected" name="username-expected" value="<?php echo $user_info['user_name']; ?>">
+                        </div>
+                        
+                        <div class="row">
+                            <p>Email</p>
+                            <input type="text" id="email" name="email" value="<?php echo $user_info['user_email']; ?>">
+                            <input type="hidden" id="email-expected" name="email-expected" value="<?php echo $user_info['user_email']; ?>">
+                        </div>
+                    
+                        <div class="row">
+                            <p>Password</p>
+                            <button type="button">Redefine Password</button>
+                        </div>
+                    </section>
                 
-                <section id="user-settings">
-                    <h1>User</h1>
-                    <hr>
-                    <div class="row">
-                        <p>Username</p>
-                        <input type="text" id="username" name="username" value="<?php echo $user_info['user_name']; ?>">
-                        <input type="hidden" id="username-expected" name="username-expected" value="<?php echo $user_info['user_name']; ?>">
+                    <section id="general-settings">
+                        <h1>General</h1>
+                        <hr>
+                        <div class="row">
+                            <p>Theme preferences</p>
+                        
+                            <select name="theme" id="theme">
+                                <option value="light" <?php if($_SESSION['theme'] == 'light'){ echo "selected"; } ?>>Light Theme</option>
+                                <option value="dark" <?php if($_SESSION['theme'] == 'dark'){ echo "selected"; } ?>>Dark Theme</option>
+                            </select>
+                        
+                            <input type="hidden" id="theme-expected" name="theme-expected" value="<?php echo $user_info['theme_preference']; ?>">
+                        </div>
+                    </section>
+                
+                    <section id="delete-account">
+                        <h1>Delete your account</h1>
+                        <hr>
+                        <p>Be careful! Deleting your account is a permanent action.</p>
+                        <div style="width: 100%; display: flex; justify-content: end;">
+                            <button class="delete" type="button">Delete my account</button>
+                        </div>
+                    </section>
+                
+                    <div id='save-form'>
+                        <button id="save" type="submit">Save Changes</button>
+                        <button id="cancel" type="button">Cancel</button>
                     </div>
-
-                    <div class="row">
-                        <p>Email</p>
-                        <input type="text" id="email" name="email" value="<?php echo $user_info['user_email']; ?>">
-                        <input type="hidden" id="email-expected" name="email-expected" value="<?php echo $user_info['user_email']; ?>">
-                    </div>
-
-                    <div class="row">
-                        <p>Password</p>
-                        <button>Redefine Password</button>
-                    </div>
-                </section>
-
-                <section id="general-settings">
-                    <h1>General</h1>
-                    <hr>
-                    <div class="row">
-                        <p>Theme preferences</p>
-
-                        <select name="theme" id="theme">
-                            <option value="light" <?php if($_SESSION['theme'] == 'light'){ echo "selected"; } ?>>Light Theme</option>
-                            <option value="dark" <?php if($_SESSION['theme'] == 'dark'){ echo "selected"; } ?>>Dark Theme</option>
-                        </select>
-
-                        <input type="hidden" id="theme-expected" name="theme-expected" value="<?php echo $user_info['theme_preference']; ?>">
-                    </div>
-                </section>
-
-                <section id="delete-account">
-                    <h1>Delete your account</h1>
-                    <hr>
-                    <p>Be careful! Deleting your account is a permanent action.</p>
-                    <div style="width: 100%; display: flex; justify-content: end;">
-                        <button class="delete">Delete my account</button>
-                    </div>
-                </section>
-
-                <div id='save-form'>
-                    <button id="save">Save Changes</button>
-                    <button id="cancel">Cancel</button>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 
