@@ -2,36 +2,31 @@
 
 :root{
     
-    --background: #f1f1e6;
-    --background-darker: #d6d6cf;
-    --primary: #021526;
+  --background: #f1f1e6;
+  --background-darker: #d6d6cf;
+  --primary: #021526;
 
-    --accent_1: #feba3e;
-    --accent_1_darker: #e2a739;
-    --accent_2: #0099ff;
-    --accent_2_darker: #0278c7;
-    --accent_3: #03346E;
-    --accent_3_darker: #022653;;
+  --accent_1: #feba3e;
+  --accent_1_darker: #e2a739;
+  --accent_2: #0099ff;
+  --accent_3: #03346E;
 
-    --text-color_1: black;
-    --text-color_2: white;
+  --text-color_1: black;
+  --text-color_2: white;
 
-    --text-color_0: gray;
-    --danger: #d91919;
+  --text-color_0: gray;
 
 }
 
 .dark-theme{
-  --background: #000000;
-  --background-darker: #151515;
+  --background: #161816;
+  --background-darker: #2d2f2d;
   --primary: #021526;
 
   --accent_1: #feba3e;
   --accent_1_darker: #e2a739;
   --accent_2: #03346E;
-  --accent_2_darker: #022653;
   --accent_3: #0099ff;
-  --accent_3_darker: #0278c7;
 
   --text-color_1: white;
   --text-color_2: black;

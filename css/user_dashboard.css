@@ -19,8 +19,8 @@
 }
 
 .dark-theme{
-  --background: #000000;
-  --background-darker: #151515;
+  --background: #161816;
+  --background-darker: #2d2f2d;
   --primary: #021526;
 
   --accent_1: #feba3e;
