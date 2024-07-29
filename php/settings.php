@@ -62,7 +62,6 @@
             </div>
 
             <form action="utilities/updateUserInfo.php" method="post">
-                <input type="hidden" name="id" id='id' value='<?php echo $user_info['user_id'] ?>'>
                 <div class="content">
                     <section id="user-settings">
                         <h1>User</h1>

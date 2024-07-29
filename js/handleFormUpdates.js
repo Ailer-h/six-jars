@@ -7,7 +7,7 @@ function allValuesCorrect(){
         let input = inputs[i];
 
         console.log(input)
-        if(!input.id.includes("-expected") && input.id != "id"){
+        if(!input.id.includes("-expected")){
             if(input.value != document.getElementById(input.id + "-expected").value){
                 return false;
             }
@@ -44,13 +44,13 @@ Array.from(document.getElementsByTagName('select')).forEach(input => {
 document.getElementById('cancel').addEventListener("click", function(){
     
     Array.from(document.getElementsByTagName('input')).forEach(input => {
-        if(!input.id.includes('-expected') && input.id != "id"){
+        if(!input.id.includes('-expected')){
             input.value = document.getElementById(input.id + "-expected").value;
         }
     });
 
     Array.from(document.getElementsByTagName('select')).forEach(input => {
-        if(!input.id.includes('-expected') && input.id != "id"){
+        if(!input.id.includes('-expected')){
             input.value = document.getElementById(input.id + "-expected").value;
         }
     });

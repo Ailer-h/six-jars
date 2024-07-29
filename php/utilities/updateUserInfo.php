@@ -2,7 +2,8 @@
 
     if(isset($_POST['email'])){
 
-        $id = $_POST['id'];
+        session_start();
+        $id = $_SESSION['id'];
 
         $email = $_POST['email'];
         $email_expected = $_POST['email-expected'];
@@ -26,9 +27,11 @@
         }
 
         if($theme != $theme_expected){
-            $update .= "theme_preference = '$theme'";
+            $update .= "theme_preference = '$theme',";
             $_SESSION['theme'] = $theme;
         }
+
+        $update = substr($update, 0, -1);
 
         //Updates the necessary info
         include "mysqlConnect.php";
