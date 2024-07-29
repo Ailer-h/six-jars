@@ -394,6 +394,110 @@ hr{
   transition: 200ms;
 }
 
+/* Classes of the confirmation pop-up */
+
+#popup{
+  display: none;
+}
+
+.center-absolute{
+
+  position: absolute;
+  z-index: 2;
+  top: 5em;
+  
+  height: calc(100vh - 7em);
+  width: 100%;
+  padding-bottom: 2em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  backdrop-filter: brightness(50%) blur(.3em);
+
+}
+
+.center-absolute .header{
+  height: 2.5em;
+  width: 30em;
+
+  background-color: var(--primary);
+
+  border-radius: 1.5em 1.5em 0 0;
+
+  padding-left: 1em;
+  padding-right: 1em;
+
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.center-absolute .header svg{
+  fill: white;
+  height: 2em;
+  width: 2em;
+  cursor: pointer;
+}
+
+.center-absolute .pop-up{
+  width: 30em;
+  height: 15em;
+
+  background-color: var(--background);
+
+  border-radius: 0 0 1.5em 1.5em;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+
+  flex-direction: column;
+}
+
+.center-absolute .pop-up div{
+  display: flex;
+
+  gap: 1em;
+}
+
+.center-absolute .pop-up div > *{
+
+  flex: 1;
+  border: none;
+  color: var(--text-color_1);
+  border-radius: .5em;
+  padding: .5em;
+  font-weight: bold;
+  cursor: pointer;
+
+}
+
+.center-absolute .pop-up div .del{
+
+  background-color: var(--danger);
+
+}
+
+.center-absolute .pop-up div .del:hover{
+  transform: scale(1.1);
+}
+
+.center-absolute .pop-up div .cancel{
+  
+  background-color: var(--accent_2);
+  
+}
+.center-absolute .pop-up div .cancel:hover{
+  transform: scale(1.1);
+  background-color: var(--accent_2_darker);
+}
+
+/* End of the classes of the confirmation pop-up */
+
 /* Classes da responsividade */
 .container {
     max-width: 100%;

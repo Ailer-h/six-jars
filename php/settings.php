@@ -109,7 +109,7 @@
                         <hr>
                         <p>Be careful! Deleting your account is a permanent action.</p>
                         <div style="width: 100%; display: flex; justify-content: end;">
-                            <button class="delete" type="button">Delete my account</button>
+                            <button class="delete" type="button" onclick="document.getElementById('popup').style.display = 'block'">Delete my account</button>
                         </div>
                     </section>
                 
@@ -119,6 +119,21 @@
                     </div>
                 </div>
             </form>
+        </div>
+    </div>
+
+    <div id="popup">
+        <div class="center-absolute">
+            <div class="header"></div>
+            <div class="pop-up">
+                <h1>Are you sure you want to delete your account?</h1>
+                <p>This action is irreversible</p>
+
+                <div>
+                    <button class="del" onclick="location.href = location.href.replace('settings.php', 'utilities/deleteUser.php?del=1')">Yes, delete it!</button>
+                    <button class="cancel" onclick="document.getElementById('popup').style.display = 'none'">No, I changed my mind!</button>
+                </div>
+            </div>
         </div>
     </div>
 
