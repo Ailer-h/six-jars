@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/user_dashboard.css">
-    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/logo.ico" type="image/x-icon">
     <title>Dashboard</title>
 </head>
 <body <?php if($_SESSION['theme'] == 'dark'){ echo "class='dark-theme'"; } ?>>

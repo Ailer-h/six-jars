@@ -134,7 +134,7 @@ body{
     width: 15em;
     height: 3em;
 
-    /* display: none; */
+    display: none;
     place-items: center;
     grid-template-columns: 30% 70%;
 
