@@ -3,12 +3,17 @@
     //Checks if the user is logged in - [ALREADY STARTS SESSION]
     include "utilities/checkSession.php";
 
+    //Function that treats a date putting it on the DD/MM/YYYY format
+    include "utilities/treatDate.php";
+
     //Loads user information and stores it
     include "utilities/mysqlConnect.php";
     $id = $_SESSION['id'];
-    $user_info = mysqli_fetch_assoc(mysqli_query($connection, "select user_id, user_name, user_email, theme_preference from users where user_id = $id;"));
+    $user_info = mysqli_fetch_assoc(mysqli_query($connection, "select user_id, user_name, user_email, theme_preference, account_created from users where user_id = $id;"));
 
     mysqli_close($connection);
+
+    $account_created = treatDate(explode(" ", $user_info['account_created'])[0]);
 ?>
 
 <!DOCTYPE html>
